@@ -10,3 +10,6 @@ services:
       - CASSANDRA_CLUSTER_NAME=LocalCluster
       - CASSANDRA_DC=dc1
       - CASSANDRA_RACK=rack1
+
+volumes:
+  cassandra_data:
