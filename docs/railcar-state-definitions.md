@@ -17,7 +17,7 @@
 
 ### Yard Operations
 * **Under Inspection** (UI): car is being inspected
-* **Bad Order** (BA): car is determined to be mechanically defective
+* **Bad Order** (BO): car is determined to be mechanically defective
 * **Under Repair** (UR): car is being repaired
 
 ### Industry
