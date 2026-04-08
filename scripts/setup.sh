@@ -96,7 +96,7 @@ fi
 
 echo -n "checking Python ... "
 if ! "$PYTHON_PATH" --version >/dev/null 2>&1; then
-    echo "ERROR: Maven is not installed or is not accessible" >&2
+    echo "ERROR: Python is not installed or is not accessible" >&2
     exit 1
 else
   echo "done"
