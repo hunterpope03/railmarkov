@@ -1,4 +1,4 @@
-package com.railmarkov.cassandra.entity;
+package railmarkov.entity;
 
 
 public enum State {

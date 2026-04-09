@@ -1,4 +1,4 @@
-package com.railmarkov.cassandra; 
+package railmarkov.cassandra; 
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import com.datastax.oss.driver.api.core.cql.ResultSet;
 import com.datastax.oss.driver.api.core.cql.Row;
 import com.datastax.oss.driver.api.core.cql.SimpleStatement;
 
-import com.railmarkov.cassandra.entity.Event; 
-import com.railmarkov.cassandra.entity.State; 
+import railmarkov.entity.State; 
+import railmarkov.entity.Event; 
 
 
 public class EventRepository {

@@ -1,4 +1,4 @@
-package com.railmarkov.cassandra.entity;
+package railmarkov.entity;
 
 import java.time.Instant;
 import java.util.UUID;

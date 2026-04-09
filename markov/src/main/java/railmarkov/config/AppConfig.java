@@ -1,4 +1,4 @@
-package com.railmarkov.config;
+package railmarkov.config; 
 
 import io.github.cdimascio.dotenv.Dotenv;
 

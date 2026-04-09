@@ -1,4 +1,4 @@
-package com.railmarkov.cassandra; 
+package railmarkov.cassandra; 
 
 import java.net.InetSocketAddress;
 
