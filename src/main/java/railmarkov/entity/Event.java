@@ -1,7 +1,9 @@
-package railmarkov.entity;
+package railmarkov.entity; 
 
 import java.time.Instant;
 import java.util.UUID;
+
+import railmarkov.model.State; 
 
 
 public class Event {
@@ -15,7 +17,15 @@ public class Event {
         this.timestamp = timestamp;
     }
 
-    public UUID getRailcarId() { return railcarId; }
-    public State getState() { return state; }
-    public Instant getTimestamp() { return timestamp; }
+    public UUID getRailcarId() { 
+        return this.railcarId; 
+    }
+
+    public State getState() { 
+        return this.state; 
+    }
+
+    public Instant getTimestamp() { 
+        return this.timestamp; 
+    }
 }

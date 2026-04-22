@@ -1,4 +1,4 @@
-package railmarkov.entity;
+package railmarkov.model; 
 
 
 public enum State {
@@ -27,12 +27,14 @@ public enum State {
         this.code = code;
     }
 
-    public String getCode() { return code; }
+    public String getCode() { 
+        return this.code; 
+    }
 
     public static State fromCode(String code) {
         for (State s : values()) {
             if (s.code.equals(code)) return s;
         }
-        throw new IllegalArgumentException("Unknown state code: " + code);
+        throw new IllegalArgumentException("unknown 'railmarkov.model.State' code: " + code);
     }
 }

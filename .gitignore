@@ -1,5 +1,3 @@
-*.pyc
 .DS_Store
-data/
-markov/target
-venv
+src/main/resources/transition_matrix.txt
+target

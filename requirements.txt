@@ -1,4 +1,0 @@
-cassandra-driver==3.29.3
-pip==25.2
-pydantic-settings==2.13.1
-PyYAML==6.0.3
