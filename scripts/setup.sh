@@ -15,11 +15,11 @@ echo
 
 
 echo -n "loading application config ... "
-CONFIG="$PROJECT_ROOT/src/main/resources/config.properties"
-eval "$(sed "s/\./_/g; s/^/export /; s/=\(.*\)$/=\"\1\"/" "$CONFIG")"
+CONFIG_FILE="$PROJECT_ROOT/src/main/resources/config.properties"
+source "$CONFIG_FILE"
 echo "done"
-echo "config sourced from '$CONFIG'"
-echo 
+echo "config sourced from '$CONFIG_FILE'"
+echo
 
 
 echo -n "verifying 'Docker' requirement ... "
@@ -81,15 +81,15 @@ echo "done"
 echo
 
 
-echo -n "verifying Cassandra keyspace '$cassandra_keyspace' exists ... "
-QUERY="CREATE KEYSPACE IF NOT EXISTS $cassandra_keyspace WITH REPLICATION = $cassandra_replication;"
+echo -n "verifying Cassandra keyspace '$CASSANDRA_KEYSPACE' exists ... "
+QUERY="CREATE KEYSPACE IF NOT EXISTS $CASSANDRA_KEYSPACE WITH REPLICATION = $CASSANDRA_KEYSPACE_REPLICATION;"
 docker-compose exec -T cassandra cqlsh -e "$QUERY"
 echo "done"
 echo
 
 
-echo -n "verifying Cassandra table '$cassandra_table' exists ... "
-QUERY="CREATE TABLE IF NOT EXISTS $cassandra_keyspace.$cassandra_table (
+echo -n "verifying Cassandra table '$CASSANDRA_KEYSPACE.$CASSANDRA_TABLE' exists ... "
+QUERY="CREATE TABLE IF NOT EXISTS $CASSANDRA_KEYSPACE.$CASSANDRA_TABLE (
     railcar_id uuid, 
     state text, 
     timestamp timestamp, 

@@ -1,4 +1,4 @@
-package railmarkov.client; 
+package railmarkov.infrastructure.client; 
 
 import java.net.InetSocketAddress;
 

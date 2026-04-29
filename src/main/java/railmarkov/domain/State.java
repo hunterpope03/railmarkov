@@ -1,4 +1,4 @@
-package railmarkov.model; 
+package railmarkov.domain; 
 
 
 public enum State {

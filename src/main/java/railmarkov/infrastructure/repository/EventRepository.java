@@ -1,15 +1,16 @@
-package railmarkov.repository;
+package railmarkov.infrastructure.repository;
 
 import java.util.ArrayList; 
+import java.util.Comparator; 
 import java.util.List; 
 
 import com.datastax.oss.driver.api.core.cql.ResultSet;
 import com.datastax.oss.driver.api.core.cql.Row;
 import com.datastax.oss.driver.api.core.cql.SimpleStatement;
 
-import railmarkov.client.CassandraClient; 
-import railmarkov.entity.Event; 
-import railmarkov.model.State; 
+import railmarkov.domain.Event; 
+import railmarkov.domain.State; 
+import railmarkov.infrastructure.client.CassandraClient; 
 
 
 public class EventRepository {
@@ -24,8 +25,7 @@ public class EventRepository {
     public List<Event> selectEvents() {
         List<Event> events = new ArrayList<>();
 
-        SimpleStatement simpleStatement = SimpleStatement.builder("SELECT railcar_id, state, timestamp FROM " + this.table)
-            .build(); 
+        SimpleStatement simpleStatement = SimpleStatement.builder("SELECT railcar_id, state, timestamp FROM " + this.table).build(); 
 
         ResultSet resultSet = this.cassandraClient.execute(simpleStatement); 
 
@@ -38,6 +38,10 @@ public class EventRepository {
                 )
             ); 
         }
+
+        events.sort(
+            Comparator.comparing(Event::getRailcarId).thenComparing(Event::getTimestamp)
+        );
 
         return events; 
     }

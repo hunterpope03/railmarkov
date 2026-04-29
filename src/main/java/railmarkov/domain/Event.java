@@ -1,9 +1,7 @@
-package railmarkov.entity; 
+package railmarkov.domain; 
 
 import java.time.Instant;
 import java.util.UUID;
-
-import railmarkov.model.State; 
 
 
 public class Event {

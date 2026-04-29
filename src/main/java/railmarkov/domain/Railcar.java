@@ -1,8 +1,6 @@
-package railmarkov.entity; 
+package railmarkov.domain; 
 
 import java.util.UUID;
-
-import railmarkov.model.State;
 
 
 public class Railcar {
